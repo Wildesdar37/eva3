@@ -10,8 +10,8 @@ pipeline {
 
     environment {
         ARTIFACTORY_URL = 'http://jfrog_artifactory_eva5:8082/artifactory'
-        ARTIFACTORY_REPO = 'eva3'
-        ARTIFACTORY_CREDS = credentials('jfrog-credenciales') // ID de las credenciales de Artifactory en Jenkins
+        ARTIFACTORY_REPO = 'eva5b-myconstruction'
+        ARTIFACTORY_CREDS = credentials('jfrog-cred') // ID de las credenciales de Artifactory en Jenkins
     }
 
     stages {
@@ -19,7 +19,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Clonar el código fuente desde el repositorio
-                git url: 'https://github.com/Wildesdar37/eva3.git', branch: 'main'
+                git url: 'https://github.com/Wildesdar37/eva_5b_mycontruction.git', branch: 'main'
             }
         }
 
